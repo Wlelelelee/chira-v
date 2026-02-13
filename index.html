@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Chiraa :p</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS STYLING (Tampilan) --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background-color: #ffdde1; /* Fallback */
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* Biar ga bisa scroll sembarangan */
+            text-align: center;
+            color: #4a4a4a;
+        }
+
+        /* Container utama hp */
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff6b6b;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Styling Foto Grid (Slide 1) */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Foto slide akhir */
+        .single-photo img {
+            width: 80%;
+            border-radius: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: 10px;
+        }
+
+        /* Tombol */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* Tombol Utama (Warna Pink) */
+        .btn-yes {
+            background-color: #ff6b6b;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Tombol Kedua (Warna Abu/Putih) */
+        .btn-no {
+            background-color: #f1f2f6;
+            color: #57606f;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Animasi Transisi */
+        .slide {
+            display: none; /* Default sembunyi */
+            animation: fadeIn 0.8s ease;
+        }
+
+        .slide.active {
+            display: block; /* Munculkan yang aktif */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollable text area untuk pesan panjang */
+        .message-box {
+            max-height: 300px;
+            overflow-y: auto;
+            text-align: justify;
+            padding: 10px;
+            background: #fff0f3;
+            border-radius: 10px;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="slide1" class="slide active">
+        <div class="photo-grid">
+            <img src="https://via.placeholder.com/150/ff9a9e/ffffff?text=Foto+1" alt="Foto 1">
+            <img src="https://via.placeholder.com/150/fad0c4/ffffff?text=Foto+2" alt="Foto 2">
+            <img src="https://via.placeholder.com/150/ffdde1/ffffff?text=Foto+3" alt="Foto 3">
+            <img src="https://via.placeholder.com/150/fbc2eb/ffffff?text=Foto+4" alt="Foto 4">
+        </div>
+        <h1>Happy Valentine, Chiraa :p</h1>
+        <p>Kamu penasaran gaa ini tentang apa?</p>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="goToSlide('slide2-yes')">Iyaa, aku mau</button>
+            <button class="btn-no" onclick="goToSlide('slide2-no')">G, ak gmw tw</button>
+        </div>
+    </div>
+
+    <div id="slide2-yes" class="slide">
+        <h1>YEYYY, makasii</h1>
+        <p>Aku cuma mau bilang sesuatuu....</p>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="goToSlide('slide3-yes')">Apatuu?</button>
+            <button class="btn-no" onclick="goToSlide('slide3-no')">Gamau denger, wle :p</button>
+        </div>
+    </div>
+
+    <div id="slide2-no" class="slide">
+        <h1>:<</h1>
+        <p>Kok gt si, jht bgt km :<</p>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="goToSlide('slide2-yes')">Ihh iyaa, aku mau tau dehh</button>
+        </div>
+    </div>
+
+    <div id="slide3-yes" class="slide">
+        <h1>Untuk Pengu :p</h1>
+        <div class="message-box">
+            <p>
+                Selamat hari valentine ya pengu :p <br><br>
+                Makasii yaa awalnya udah contact aku terus kita jadinya keterusan berkomunikasi sampe sekarang ini, jadinya aku ada temen ngobroll, aku seneng bangett. Makasii juga karena kamu aku jadi termotivasi lebih baik lagi, kamu juga selalu sabar dan selalu ngedukung aku, kamu juga bikin hari" weekend aku jadi lebih seru.<br><br>
+                Aku apresiasi semua hal baik yang kamu lakuin walaupun hal kecil, aku juga notice dan bangga sama peningkatan nilai kamu, semoga bakal selalu bagus ya :p, terus semoga komunikasi kita tetep lancar dan ga rusak, kalo ada apa" kita perbaikin bareng" yaa.<br><br>
+                Sorryy kalo aku belum jadi temen ngobrol yang baik, kurang peka, ngeselin, dan apala semua itu, tolong bilangin aja biar aku pelan" belajar jadi lebih baik yaa... aku gatau mau ketik apalagi sksksk, tapi makasii udah bacaa :p
+            </p>
+        </div>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="goToSlide('slide4')">Lanjut -></button>
+        </div>
+    </div>
+
+    <div id="slide3-no" class="slide">
+        <h1>Ywdla</h1>
+        <p>Ywdla gush, ak gjd ngmg</p>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="goToSlide('slide3-yes')">Iyaa dehh, aku penasarann</button>
+        </div>
+    </div>
+
+    <div id="slide4" class="slide">
+        <h1>Selesai :p</h1>
+        <p>Makasii udaa bacaa, pengu ceboll :p</p>
+        <div class="single-photo">
+            <img src="https://via.placeholder.com/300/ff9a9e/ffffff?text=Foto+Pengu" alt="Foto Final">
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // --- JAVASCRIPT LOGIC (Otaknya) ---
+    function goToSlide(slideId) {
+        // 1. Sembunyikan semua slide
+        const allSlides = document.querySelectorAll('.slide');
+        allSlides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+
+        // 2. Munculkan slide tujuan
+        const targetSlide = document.getElementById(slideId);
+        if (targetSlide) {
+            targetSlide.classList.add('active');
+        }
+
+        // (Opsional) Play music pas klik pertama kali kalau mau
+        // var audio = document.getElementById("bgm");
+        // if(audio.paused && slideId !== 'slide1') audio.play();
+    }
+</script>
+
+</body>
+</html>
