@@ -144,38 +144,38 @@
 <div class="container">
     <div id="slide1" class="slide active">
         <div class="photo-grid">
-            <img src="https://via.placeholder.com/150/ff9a9e/ffffff?text=Foto+1" alt="Foto 1">
-            <img src="https://via.placeholder.com/150/fad0c4/ffffff?text=Foto+2" alt="Foto 2">
-            <img src="https://via.placeholder.com/150/ffdde1/ffffff?text=Foto+3" alt="Foto 3">
-            <img src="https://via.placeholder.com/150/fbc2eb/ffffff?text=Foto+4" alt="Foto 4">
+            <img src="1.jpg" alt="Foto 1">
+            <img src="2.jpg" alt="Foto 2">
+            <img src="3.jpg" alt="Foto 3">
+            <img src="4.jpg" alt="Foto 4">
         </div>
         <h1>Happy Valentine, Chiraa :p</h1>
-        <p>Kamu penasaran gaa ini tentang apa?</p>
+        <p>kamu penasaran gaa ini tentang apa?</p>
         <div class="btn-group">
-            <button class="btn-yes" onclick="goToSlide('slide2-yes')">Iyaa, aku mau</button>
-            <button class="btn-no" onclick="goToSlide('slide2-no')">G, ak gmw tw</button>
+            <button class="btn-yes" onclick="goToSlide('slide2-yes')">iyaa, aku penasarann</button>
+            <button class="btn-no" onclick="goToSlide('slide2-no')">g, ak gmw tw</button>
         </div>
     </div>
 
     <div id="slide2-yes" class="slide">
         <h1>YEYYY, makasii</h1>
-        <p>Aku cuma mau bilang sesuatuu....</p>
+        <p>aku cuma mau bilang sesuatuu....</p>
         <div class="btn-group">
-            <button class="btn-yes" onclick="goToSlide('slide3-yes')">Apatuu?</button>
-            <button class="btn-no" onclick="goToSlide('slide3-no')">Gamau denger, wle :p</button>
+            <button class="btn-yes" onclick="goToSlide('slide3-yes')">apatuu?</button>
+            <button class="btn-no" onclick="goToSlide('slide3-no')">gamau denger, wle :p</button>
         </div>
     </div>
 
     <div id="slide2-no" class="slide">
         <h1>:<</h1>
-        <p>Kok gt si, jht bgt km :<</p>
+        <p>kok gt si, jht bgt km :<</p>
         <div class="btn-group">
-            <button class="btn-yes" onclick="goToSlide('slide2-yes')">Ihh iyaa, aku mau tau dehh</button>
+            <button class="btn-yes" onclick="goToSlide('slide2-yes')">ihh iyaa, aku mau tau dehh</button>
         </div>
     </div>
 
     <div id="slide3-yes" class="slide">
-        <h1>Untuk Pengu :p</h1>
+        <h1>for pengu :p</h1>
         <div class="message-box">
             <p>
                 Selamat hari valentine ya pengu :p <br><br>
@@ -185,23 +185,23 @@
             </p>
         </div>
         <div class="btn-group">
-            <button class="btn-yes" onclick="goToSlide('slide4')">Lanjut -></button>
+            <button class="btn-yes" onclick="goToSlide('slide4')">lanjut -></button>
         </div>
     </div>
 
     <div id="slide3-no" class="slide">
-        <h1>Ywdla</h1>
-        <p>Ywdla gush, ak gjd ngmg</p>
+        <h1>ywdla</h1>
+        <p>ywdla gush, ak gjd ngmg</p>
         <div class="btn-group">
-            <button class="btn-yes" onclick="goToSlide('slide3-yes')">Iyaa dehh, aku penasarann</button>
+            <button class="btn-yes" onclick="goToSlide('slide3-yes')">iyaa dehh, aku penasarann</button>
         </div>
     </div>
 
     <div id="slide4" class="slide">
-        <h1>Selesai :p</h1>
-        <p>Makasii udaa bacaa, pengu ceboll :p</p>
+        <h1>selesai :p</h1>
+        <p>makasii udaa bacaa, pengu ceboll :p</p>
         <div class="single-photo">
-            <img src="https://via.placeholder.com/300/ff9a9e/ffffff?text=Foto+Pengu" alt="Foto Final">
+            <img src="5.jpg" alt="Foto Final">
         </div>
     </div>
 
@@ -220,6 +220,17 @@
         const targetSlide = document.getElementById(slideId);
         if (targetSlide) {
             targetSlide.classList.add('active');
+        }
+
+        // (Opsional) Play music pas klik pertama kali kalau mau
+        // var audio = document.getElementById("bgm");
+        // if(audio.paused && slideId !== 'slide1') audio.play();
+    }
+</script>
+
+</body>
+</html>
+ide.classList.add('active');
         }
 
         // (Opsional) Play music pas klik pertama kali kalau mau
